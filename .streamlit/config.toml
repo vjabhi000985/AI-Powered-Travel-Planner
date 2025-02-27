@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#4bff7e"
+backgroundColor="#121212"  # Material Dark Background
+secondaryBackgroundColor="#1E1E1E"  # Slightly lighter secondary color
+textColor="#ffffff"
+font="monospace"
