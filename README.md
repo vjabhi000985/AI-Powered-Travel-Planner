@@ -1,10 +1,15 @@
 # 🚀 Destination Dynamo AI : Travel Assistant
 
-## Overview
+## Overview :
 
 The AI Travel Assistant is a Streamlit-powered web application that provides AI-generated travel recommendations, translations, and live transport integration. It helps users find the best travel options, including flights, trains, buses, and cabs, with estimated costs and durations.
 
-## Features
+## Deployment URL :
+
+## Screenshot :
+![Image](https://github.com/user-attachments/assets/5a4da8cd-9b18-4413-a47b-96f02a05e2d6)
+
+## Features :
 
 🌍 AI-Powered Travel Recommendations: Uses LangChain with Google Gemini AI for generating travel suggestions.
 
@@ -14,13 +19,13 @@ The AI Travel Assistant is a Streamlit-powered web application that provides AI-
 
 📊 Sorting Options: Sorts recommendations by price or duration.
 
-# Tech Stack
+# Tech Stack :
 
 - Frontend: Streamlit, HTML, CSS
 
 - Backend: Python, LangChain, Google Gemini AI
 
-## Installation
+## Installation :
 
 - Clone the Repository
   `git clone https://github.com/yourusername/ai-travel-assistant.git`
@@ -43,7 +48,7 @@ TRANSPORT_API_KEY=your_transport_api_key
 
 `streamlit run app.py`
 
-## Usage
+## Usage :
 
 - Enter your departure and destination cities.
 
@@ -57,7 +62,7 @@ TRANSPORT_API_KEY=your_transport_api_key
 
 - Click on Find Travel Options to fetch recommendations.
 
-## Future Enhancements
+## Future Enhancements :
 
 🗺 Map Integration: Displays source and destination locations on an interactive map.
 
@@ -73,6 +78,6 @@ TRANSPORT_API_KEY=your_transport_api_key
 
 📅 Itinerary Planning Assistance
 
-## License
+## License :
 
 This project is licensed under the MIT License - see the LICENSE file for details.
