@@ -85,9 +85,6 @@ if st.button("🔍 Find Travel Options"):
         with st.spinner("🔄 Fetching best travel options..."):
             travel_info = get_travel_options(source_city, destination_city, preferred_mode, currency)
         
-        # ✅ Translate Travel Information
-        translated_info = translate_text(travel_info, language)
-
         st.success("✅ AI-Generated Travel Recommendations:")
         st.markdown(travel_info)
 
