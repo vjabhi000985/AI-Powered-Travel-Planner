@@ -5,3 +5,4 @@ langchain-google-genai
 deep-translator
 textwrap3
 python-dotenv
+googletrans
