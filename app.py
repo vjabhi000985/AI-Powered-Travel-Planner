@@ -1,6 +1,7 @@
 import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
+from googletrans import Translator
 from dotenv import load_dotenv
 import os
 
@@ -42,6 +43,15 @@ with col2:
     sort_by = st.radio("📊 Sort By", ["Price", "Duration"])
     language = st.selectbox("🌍 Select Language", ["English", "Spanish", "French", "German", "Hindi"])
 
+# ✅ Language Code Mapping for Translation
+language_codes = {
+    "English": "en",
+    "Spanish": "es",
+    "French": "fr",
+    "German": "de",
+    "Hindi": "hi",
+}
+
 # ✅ Function to fetch AI-generated travel options
 def get_travel_options(source, destination, mode, currency):
     system_prompt = SystemMessage(
@@ -60,11 +70,23 @@ def get_travel_options(source, destination, mode, currency):
     except Exception as e:
         return f"❌ Error fetching travel options: {str(e)}"
 
+# ✅ Function to Translate Text
+def translate_text(text, target_language):
+    if target_language == "English":  # No need to translate if already in English
+        return text
+
+    translator = Translator()
+    translated_text = translator.translate(text, dest=language_codes.get(target_language, "en")).text
+    return translated_text
+
 # ✅ Travel Option Fetching
 if st.button("🔍 Find Travel Options"):
     if source_city.strip() and destination_city.strip():
         with st.spinner("🔄 Fetching best travel options..."):
             travel_info = get_travel_options(source_city, destination_city, preferred_mode, currency)
+        
+        # ✅ Translate Travel Information
+        translated_info = translate_text(travel_info, language)
 
         st.success("✅ AI-Generated Travel Recommendations:")
         st.markdown(travel_info)
