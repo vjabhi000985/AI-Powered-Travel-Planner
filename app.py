@@ -26,14 +26,14 @@ st.markdown(
 )
 
 # ✅ Centered Title
-st.markdown("<h1 style='text-align: center;'>🚀 Destination Dynamo : AI-Powered Travel Assistant</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🚀 Destination Dynamo AI</h1>", unsafe_allow_html=True)
 
 # ✅ UI for User Input
 col1, col2 = st.columns(2)
 
 with col1:
-    source_city = st.text_input("🛫 Departure City", placeholder="E.g., New York")
-    destination_city = st.text_input("🛬 Destination City", placeholder="E.g., Los Angeles")
+    source_city = st.text_input("🛫 Departure City", placeholder="E.g., New Delhi")
+    destination_city = st.text_input("🛬 Destination City", placeholder="E.g., Amsterdam")
     travel_date = st.date_input("📅 Travel Date")
     currency = st.selectbox("💲 Select Currency", ["USD", "INR", "EUR", "GBP", "JPY"])
 
@@ -41,7 +41,6 @@ with col2:
     preferred_mode = st.selectbox("🚗 Preferred Mode", ["Any", "Flight", "Train", "Bus", "Cab"])
     sort_by = st.radio("📊 Sort By", ["Price", "Duration"])
     language = st.selectbox("🌍 Select Language", ["English", "Spanish", "French", "German", "Hindi"])
-    text_to_speech = st.checkbox("🔊 Enable Text-to-Speech")
 
 # ✅ Function to fetch AI-generated travel options
 def get_travel_options(source, destination, mode, currency):
@@ -69,9 +68,6 @@ if st.button("🔍 Find Travel Options"):
 
         st.success("✅ AI-Generated Travel Recommendations:")
         st.markdown(travel_info)
-
-        if text_to_speech:
-            st.text("🔊 Best travel option: " + travel_info.split("\n")[0])  # Read first line
 
     else:
         st.warning("⚠️ Please enter both source and destination locations.")
