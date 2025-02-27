@@ -23,25 +23,25 @@ The AI Travel Assistant is a Streamlit-powered web application that provides AI-
 ## Installation
 
 - Clone the Repository
-
-````git clone https://github.com/yourusername/ai-travel-assistant.git
-cd ai-travel-assistant```
+  `git clone https://github.com/yourusername/ai-travel-assistant.git`
+  `cd ai-travel-assistant`
 
 - Install Dependencies
-
-```pip install -r requirements.txt```
+  `pip install -r requirements.txt`
 
 - Set Up API Keys
 
-```Create a .env file and add your API keys:
+Create a .env file and add your API keys:
 
+```
 GOOGLE_API_KEY=your_google_api_key
 MAPS_API_KEY=your_google_maps_api_key
-TRANSPORT_API_KEY=your_transport_api_key```
+TRANSPORT_API_KEY=your_transport_api_key
+```
 
 - Run the App
 
-```streamlit run app.py```
+`streamlit run app.py`
 
 ## Usage
 
@@ -56,7 +56,6 @@ TRANSPORT_API_KEY=your_transport_api_key```
 - Pick a language for translation.
 
 - Click on Find Travel Options to fetch recommendations.
-
 
 ## Future Enhancements
 
@@ -74,11 +73,6 @@ TRANSPORT_API_KEY=your_transport_api_key```
 
 📅 Itinerary Planning Assistance
 
-## Contributors
-
-Your Name - GitHub Profile
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-````
