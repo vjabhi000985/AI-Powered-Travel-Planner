@@ -4,7 +4,8 @@
 
 The AI Travel Assistant is a Streamlit-powered web application that provides AI-generated travel recommendations, translations, and live transport integration. It helps users find the best travel options, including flights, trains, buses, and cabs, with estimated costs and durations.
 
-## Deployment URL :
+## Deployment URL : 
+https://destinationdynamoai.streamlit.app/
 
 ## Screenshot :
 ![Image](https://github.com/user-attachments/assets/5a4da8cd-9b18-4413-a47b-96f02a05e2d6)
